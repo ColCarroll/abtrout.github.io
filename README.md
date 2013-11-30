@@ -1,6 +1,7 @@
+
 ### logitank.net
 
-has been hosted on/by Github for a while. 
+is my website. Or whatever. I host it with github pages now so that I can freely reinstall my old [web]server whenever I feel like it. I feel like it a little more often than I should. 
 
-I like this because I can freely fiddle with my server with no fear of downtime. In an attempt to stay more organized, I'm putting past layouts in separate branches. Some of them are worth saving, at least.
+Old layouts are kept in separate branches.
 
