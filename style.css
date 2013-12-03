@@ -10,51 +10,6 @@ body {
   background-color: #a6e22e;
 }
 
-@-webkit-keyframes plug-it-in  {
-  0% { background-position: 0 0; }
-  10% { background-position: 100% 0; }
-  20% { background-position: 0 0; }
-  30% { background-position: 100% 0; }
-  40% { background-position: 0 0; }
-  50% { background-position: 100% 0; }
-  60% { background-position: 0 100%; }
-  75% { background-position: 100% 100%; }
-  80% { background-position: 0 100%; }
-  83% { background-position: 100% 100%; }
-  90% { background-position: 0 100%; }
-  100% { background-position: 100% 100%; }
-}
-@-moz-keyframes plug-it-in  {
-  0% { background-position: 0 0; }
-  10% { background-position: 100% 0; }
-  20% { background-position: 0 0; }
-  30% { background-position: 100% 0; }
-  40% { background-position: 0 0; }
-  50% { background-position: 100% 0; }
-  60% { background-position: 0 100%; }
-  75% { background-position: 100% 100%; }
-  80% { background-position: 0 100%; }
-  83% { background-position: 100% 100%; }
-  90% { background-position: 0 100%; }
-  100% { background-position: 100% 100%; }
-}
-@keyframes plug-it-in  {
-  /* dangling plug */
-  0% { background-position: 0 0; }
-  10% { background-position: 100% 0; }
-  20% { background-position: 0 0; }
-  30% { background-position: 100% 0; }
-  40% { background-position: 0 0; }
-  50% { background-position: 100% 0; }
-  /* plugged in. flickering sign */
-  60% { background-position: 0 100%; }
-  75% { background-position: 100% 100%; }
-  80% { background-position: 0 100%; }
-  83% { background-position: 100% 100%; }
-  90% { background-position: 0 100%; }
-  100% { background-position: 100% 100%; }
-}
-
 .tank {
   position: relative;
   right: -34px;
@@ -64,14 +19,10 @@ body {
 
   background-image: url("images/logitank.svg");
   background-size: 200%;
-  background-position: 100% 100%;
-
-  -moz-animation: plug-it-in 300ms steps(1) 1;
-  -webkit-animation: plug-it-in 3000ms steps(1) 1;
-  animation: plug-it-in 3000ms steps(1) 1;
+  background-position: 0 0;
 }
 
-
+/* so responsive */
 @media
 screen and (max-width: 531px) { /* 531.25 * .8 = 425*/
   .tank {
@@ -83,4 +34,52 @@ screen and (max-width: 531px) { /* 531.25 * .8 = 425*/
   }
 }
 
+@-webkit-keyframes swing {
+  50% { background-position: 100% 0; }
+}
+@-moz-keyframes swing {
+  50% { background-position: 100% 0; }
+}
+@-o-keyframes swing {
+  50% { background-position: 100% 0; }
+}
+@keyframes swing {
+  50% { background-position: 100% 0; }
+}
+
+.unplugged {
+  -webkit-animation: swing 750ms steps(1) infinite; 
+  -moz-animation: swing 750ms steps(1) infinite; 
+  -o-animation: swing 750ms steps(1) infinite; 
+  animation: swing 750ms steps(1) infinite; 
+}
+
+@-webkit-keyframes flicker {
+  0%, 37%, 63% { background-position: 0 100%; }
+  25%, 49%, 100% { background-position: 100% 100%; }
+}
+@-moz-keyframes flicker {
+  0%, 37%, 63% { background-position: 0 100%; }
+  25%, 49%, 100% { background-position: 100% 100%; }
+}
+@-o-keyframes flicker {
+  0%, 37%, 63% { background-position: 0 100%; }
+  25%, 49%, 100% { background-position: 100% 100%; }
+}
+@keyframes flicker {
+  0%, 37%, 63% { background-position: 0 100%; }
+  25%, 49%, 100% { background-position: 100% 100%; }
+}
+
+.plugged-in {
+  -webkit-animation: flicker 1200ms steps(1) 1;
+  -moz-animation: flicker 1200ms steps(1) 1;
+  -o-animation: flicker 1200ms steps(1) 1;
+  animation: flicker 1200ms steps(1) 1;
+
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
 

@@ -12,6 +12,13 @@
 
   <!-- so semantic  -->
   <div class="unplugged tank"></div>
+  <script type="text/javascript">
+    var tank = document.getElementsByClassName("tank")[0];
+    tank.onclick = function() {
+      var unplugged = (tank.className.indexOf("unplugged") >= 0);
+      tank.className = (unplugged ? "plugged-in" : "unplugged") + " tank";
+    }
+  </script>
 
 </body>
 </html>
