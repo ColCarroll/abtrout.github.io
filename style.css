@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #e9d000;
+  background-color: #a6e22e;
 }
 
 @-webkit-keyframes plug-it-in  {
@@ -54,7 +54,6 @@ body {
   90% { background-position: 0 100%; }
   100% { background-position: 100% 100%; }
 }
-
 
 .tank {
   position: relative;
