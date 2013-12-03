@@ -20,6 +20,8 @@ body {
   background-image: url("images/logitank.svg");
   background-size: 200%;
   background-position: 0 0;
+  
+  cursor: pointer;
 }
 
 /* so responsive */
