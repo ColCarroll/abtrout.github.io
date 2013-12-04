@@ -20,12 +20,12 @@
   <script type="text/javascript">
     var plug = $("#plug"),
       tank = $("#tank"),
-      counter = $("#counter")
+      counter = $("#counter");
 
     plug.on("click", function() {
-      tank.toggleClass("unplugged plugged")
-      if(tank.hasClass("plugged")) counter.trigger("increase")
-    })
+      tank.toggleClass("unplugged plugged");
+      if(tank.hasClass("plugged")) counter.trigger("increase");
+    });
  
     counter.on("increase", function() {
       // AJAX call to update!
