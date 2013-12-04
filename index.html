@@ -6,18 +6,35 @@
   <meta name="description" content="logitank.net is David Cochran">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="style.css">  
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 </head>
 <body>
 
-  <!-- so semantic  -->
-  <div class="unplugged tank"></div>
+  <div id="tank" class="unplugged">
+    <div id="plug"></div>
+    <div id="counter"></div>
+  </div>
+
   <script type="text/javascript">
-    var tank = document.getElementsByClassName("tank")[0];
-    tank.onclick = function() {
-      var unplugged = (tank.className.indexOf("unplugged") >= 0);
-      tank.className = (unplugged ? "plugged-in" : "unplugged") + " tank";
-    }
+
+    var plug = $("#plug"),
+      tank = $("#tank"),
+      counter = $("#counter")
+
+    // 1. Clicking the plug changes state of the tank (plugged-in / unplugged) 
+    plug.on("click", function() {
+      tank.toggleClass("unplugged plugged")
+      if(tank.hasClass("plugged")) counter.trigger("increase")
+    })
+ 
+    counter.on("increase", function() {
+      // AJAX call to update!
+      console.log("PLUS ONE")
+    });
+
+
   </script>
 
 </body>

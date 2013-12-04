@@ -10,7 +10,7 @@ body {
   background-color: #E4C600;
 }
 
-.tank {
+#tank {
   position: relative;
   right: -34px;
   width: 425px;
@@ -20,17 +20,26 @@ body {
   background-image: url("images/logitank.svg");
   background-size: 200%;
   background-position: 0 0;
-  
+}
+
+#plug {
+  position: absolute;
+  /* for now ... */
+  top: 0; left: 0; bottom: 0; right: 0;
   cursor: pointer;
 }
 
-/* so responsive */
-@media
-screen and (max-width: 531px) { /* 531.25 * .8 = 425*/
-  .tank {
-    height: 0;
-    width: 80%;
+#counter {
+  position: absolute;
+  bottom: 0; left: 0;
+  font: 2em monospace;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 531px) { /* 531.25 * .8 = 425*/
+  #tank {
     right: -8%;
+    width: 80%; height: 0;
     padding-bottom: 96%; /* (600/500) * 80 */ 
     margin: 10% 7%;
   }
@@ -73,7 +82,7 @@ screen and (max-width: 531px) { /* 531.25 * .8 = 425*/
   25%, 49%, 100% { background-position: 100% 100%; }
 }
 
-.plugged-in {
+.plugged {
   -webkit-animation: flicker 1200ms steps(1) 1;
   -moz-animation: flicker 1200ms steps(1) 1;
   -o-animation: flicker 1200ms steps(1) 1;
