@@ -18,12 +18,10 @@
   </div>
 
   <script type="text/javascript">
-
     var plug = $("#plug"),
       tank = $("#tank"),
       counter = $("#counter")
 
-    // 1. Clicking the plug changes state of the tank (plugged-in / unplugged) 
     plug.on("click", function() {
       tank.toggleClass("unplugged plugged")
       if(tank.hasClass("plugged")) counter.trigger("increase")
@@ -31,10 +29,7 @@
  
     counter.on("increase", function() {
       // AJAX call to update!
-      console.log("PLUS ONE")
     });
-
-
   </script>
 
 </body>
