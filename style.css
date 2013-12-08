@@ -19,21 +19,34 @@ body {
 
   background-image: url("images/logitank.svg");
   background-size: 200%;
-  background-position: 0 0;
 }
 
 #plug {
+  display: block;
   position: absolute;
-  /* for now ... */
-  top: 0; left: 0; bottom: 0; right: 0;
   cursor: pointer;
 }
 
+#tank.plugged #plug {
+  top: 50%;
+  left: 30%;
+  width: 25%;
+  height: 20%;
+}
+
+#tank.unplugged #plug {
+  top: 75%; 
+  left: 75%;
+  width: 23%;
+  height: 20%;
+}
+
 #counter {
-  position: absolute;
-  bottom: 0; left: 0;
-  font: 2em monospace;
-  color: #ffffff;
+  position: absolute; 
+  top: 100%; right: 0;
+  font: 2em "Andale Mono", monospace;
+  color: #1b1b17;
+  opacity: 0.25; 
 }
 
 @media screen and (max-width: 531px) { /* 531.25 * .8 = 425*/
@@ -42,6 +55,12 @@ body {
     width: 80%; height: 0;
     padding-bottom: 96%; /* (600/500) * 80 */ 
     margin: 10% 7%;
+  }
+
+  #tank.plugged #plug,
+  #tank.unplugged #plug {
+    top: 0; bottom: 0;
+    left: 0; right: 0;
   }
 }
 
@@ -59,10 +78,12 @@ body {
 }
 
 .unplugged {
-  -webkit-animation: swing 750ms steps(1) infinite; 
-  -moz-animation: swing 750ms steps(1) infinite; 
-  -o-animation: swing 750ms steps(1) infinite; 
-  animation: swing 750ms steps(1) infinite; 
+  -webkit-animation: swing 800ms steps(1) infinite; 
+  -moz-animation: swing 800ms steps(1) infinite; 
+  -o-animation: swing 800ms steps(1) infinite; 
+  animation: swing 800ms steps(1) infinite; 
+  
+  background-position: 0 0;
 }
 
 @-webkit-keyframes flicker {
@@ -92,5 +113,13 @@ body {
   -moz-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+
+  background-position: 100% 100%;
 }
+
+@-webkit-keyframes pulse {
+  from { color: #fff; }
+  to { color: #1b1b17; }
+}
+
 
