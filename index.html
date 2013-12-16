@@ -6,35 +6,25 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="logitank.net is under construction by design">
   <meta name="author" content="David Cochran">
+
   <link rel="stylesheet" type="text/css" href="style.css">  
+  <link rel="icon" href="favicon.ico">
 
 </head>
 <body>
 
-  <div id="tank" class="unplugged">
-    <div id="plug"></div>
-    <div id="counter"></div>
-  </div>
-
-  <script src="//lgtnk.net:3000/socket.io/socket.io.js"></script>
+  <div id="tank" class="unplugged"></div>
   <script type="text/javascript">
-    var $ = function(id) { return document.getElementById(id); },
-      t = $("tank"),
-      s = io.connect("//lgtnk.net:3000");
 
-    $("plug").onclick = function() {
-      if(t.className == "unplugged") {
-        t.className = "plugged";
-        s.emit("clicked");
-      } 
+    var t = document.getElementById("tank");
+
+    t.onclick = function() {
+      if(t.className == "unplugged") t.className="plugged";
       else t.className = "unplugged";
-    };
+    }
 
-    s.on("update", function(clicks) {
-      $("counter").textContent = $("counter").innerText = clicks;
-    });
   </script>
-
+  
 </body>
 </html>
 

@@ -2,65 +2,30 @@
 * {
   padding: 0;
   margin: 0;
-  font-weight: inherit;
-  font-style: inherit;
 }
 
 body {
-  background-color: #E4C600;
+  background-color: #E7C600;
 }
 
 #tank {
   position: relative;
   right: -34px;
-  width: 425px;
-  height: 510px;
+  width: 400px;
+  height: 500px;
   margin: 3% auto;
 
-  background-image: url("images/logitank.svg");
+  background-image: url("images/tank.svg");
   background-size: 200%;
 }
 
-#plug {
-  display: block;
-  position: absolute;
-  cursor: pointer;
-}
-
-#tank.plugged #plug {
-  top: 50%;
-  left: 30%;
-  width: 25%;
-  height: 20%;
-}
-
-#tank.unplugged #plug {
-  top: 75%; 
-  left: 75%;
-  width: 23%;
-  height: 20%;
-}
-
-#counter {
-  position: absolute; 
-  top: 100%; right: 0;
-  font: 2em "Andale Mono", monospace;
-  color: #1b1b17;
-  opacity: 0.25; 
-}
-
-@media screen and (max-width: 531px) { /* 531.25 * .8 = 425*/
+@media screen and (max-width:480px) {
   #tank {
     right: -8%;
-    width: 80%; height: 0;
-    padding-bottom: 96%; /* (600/500) * 80 */ 
-    margin: 10% 7%;
-  }
-
-  #tank.plugged #plug,
-  #tank.unplugged #plug {
-    top: 0; bottom: 0;
-    left: 0; right: 0;
+    height: 0; 
+    width: 80%; 
+    padding-bottom: 100%;
+    margin: 10% auto;
   }
 }
 
@@ -82,7 +47,7 @@ body {
   -moz-animation: swing 800ms steps(1) infinite; 
   -o-animation: swing 800ms steps(1) infinite; 
   animation: swing 800ms steps(1) infinite; 
-  
+
   background-position: 0 0;
 }
 
@@ -116,10 +81,4 @@ body {
 
   background-position: 100% 100%;
 }
-
-@-webkit-keyframes pulse {
-  from { color: #fff; }
-  to { color: #1b1b17; }
-}
-
 
