@@ -17,6 +17,7 @@ body {
 
   background-image: url("images/tank.svg");
   background-size: 200%;
+  cursor: pointer;
 }
 
 @media screen and (max-width:480px) {
