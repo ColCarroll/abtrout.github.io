@@ -16,11 +16,13 @@
 
   <div id="tank" class="unplugged"></div>
   <script type="text/javascript">
-    var t = document.getElementById("tank");
-    t.onclick = function() {
-      if(t.className == "unplugged") t.className="plugged";
-      else t.className = "unplugged";
-    }
+    var t = document.getElementById("tank"),
+        LOGITANK = function() {
+          if(t.className == "unplugged") t.className="plugged";
+          else t.className = "unplugged";
+        };
+    t.onclick = LOGITANK;
+    setTimeout(LOGITANK, 2500);
   </script>
   
 </body>

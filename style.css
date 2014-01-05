@@ -30,25 +30,7 @@ body {
   }
 }
 
-@-webkit-keyframes swing {
-  50% { background-position: 100% 0; }
-}
-@-moz-keyframes swing {
-  50% { background-position: 100% 0; }
-}
-@-o-keyframes swing {
-  50% { background-position: 100% 0; }
-}
-@keyframes swing {
-  50% { background-position: 100% 0; }
-}
-
 .unplugged {
-  -webkit-animation: swing 800ms steps(1) infinite; 
-  -moz-animation: swing 800ms steps(1) infinite; 
-  -o-animation: swing 800ms steps(1) infinite; 
-  animation: swing 800ms steps(1) infinite; 
-
   background-position: 0 0;
 }
 
