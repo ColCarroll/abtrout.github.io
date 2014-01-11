@@ -20,9 +20,10 @@
         LOGITANK = function() {
           if(t.className == "unplugged") t.className="plugged";
           else t.className = "unplugged";
-        };
+          clearTimeout(s);
+        },
+        s = setTimeout(LOGITANK, 1337);
     t.onclick = LOGITANK;
-    setTimeout(LOGITANK, 1337);
   </script>
   
 </body>
