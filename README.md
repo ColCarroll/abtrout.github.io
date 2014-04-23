@@ -1,5 +1,5 @@
 
-### logitank.net
+### plug.
 
-Old layouts are kept in separate branches.
+A content-less landing page I used for a while. I like `keyframes` and this one included a bunch!
 
