@@ -1,5 +1,5 @@
 
-### plug.
+### logitank LABS&trade; 
 
-A content-less landing page I used for a while. I like `keyframes` and this one included a bunch!
+is coming soon. Reverted to an older layout in the meantime. 
 
