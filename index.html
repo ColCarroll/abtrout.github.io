@@ -2,30 +2,28 @@
 <html>
 <head>
 
-  <title>logitank/</title>
+  <title>logitankLABS</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="logitank.net is under construction by design">
-  <meta name="author" content="David Cochran">
-
-  <link rel="stylesheet" type="text/css" href="style.css">  
-  <link rel="icon" href="favicon.ico">
-  <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-46680951-1"]);_gaq.push(["_trackPageview"]);(function(){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()</script>
+  <link rel='stylesheet' type='text/css' href='style.css'>
 
 </head>
 <body>
 
-  <div id="tank" class="unplugged"></div>
-  <script type="text/javascript">
-    var t = document.getElementById("tank"),
-        LOGITANK = function() {
-          if(t.className == "unplugged") t.className="plugged";
-          else t.className = "unplugged";
-          clearTimeout(s);
-        },
-        s = setTimeout(LOGITANK, 1337);
-    t.onclick = LOGITANK;
-  </script>
-  
+  <div class='container'>
+    <section class='logi'>
+      <div class='logo'></div>
+      <div class='label'></div>
+    </section>
+    <section class='tank'>
+      <div class='logo'></div>
+      <div class='label'></div>
+    </section>
+    <section class='labs'>
+      <div class='logo'></div>
+      <div class='label'></div>
+    </section>
+  </div>
+
 </body>
 </html>
 
