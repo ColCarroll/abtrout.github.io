@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+body {
+  background-color: #E7C600;
+}
+
 .logo,
 .label {
   width: 100%;
@@ -28,6 +32,9 @@
   overflow: hidden;
 }
 
+.logi .label { opacity: 0.50; }
+.tank .label { opacity: 0.80; }
+
 .logo {
   display: none;
 }
@@ -43,14 +50,14 @@
     -o-animation: bubble 450ms steps(1) infinite;
     animation: bubble 450ms steps(1) infinite;
   }
+
+  .logi .label,
+  .tank .label {
+    opacity: 1;
+  }
 }
 
 @media screen and (min-width: 496px) and (max-width: 799px) {
-  .logi,
-  .tank,
-  .labs {
-    overflow: hidden;
-  }
 
   .logo,
   .label {
@@ -61,14 +68,17 @@
     display: block;
     width: 24%; 
     padding-bottom: 24%;
-    
     position: relative;
     right: -8%;
+    margin-left: 8%;
   }
 
   .label {
+    display: block;
     width: 60%;
     padding-bottom: 24%;
+    position: relative;
+    top: 1em;
   }
 }
 
