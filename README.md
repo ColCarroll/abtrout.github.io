@@ -1,3 +1,1 @@
-
-### logitank LABS&trade; 
-
+### Logitank Labs 

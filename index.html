@@ -2,37 +2,30 @@
 <html>
 <head>
 
-  <title>logitank LABS</title>
+  <title>Logitank Labs</title>
   <meta name="author" content="David Cochran">
-  <meta name="description" content="logitank.net is under construction by design.">
+  <meta name="description" content="Logitank is under construction by design.">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel='stylesheet' type='text/css' href='style.css'>
+  <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300,700italic" rel="stylesheet" type="text/css">
+  <link href="style.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
 
-  <div class='container'>
-    <section class='logi'>
-      <div class='logo'></div>
-      <div class='label'></div>
-    </section>
-    <section class='tank'>
-      <div class='logo'></div>
-      <div class='label'></div>
-    </section>
-    <section class='labs'>
-      <div class='logo'></div>
-      <div class='label'></div>
-    </section>
+  <div class="container flex">
+    <header class="header">
+      <div class="splash"></div>
+      <div class="text-center text-md">under construction by design</div>
+    </header>
   </div>
 
   <script type='text/javascript'>
-    document.head.appendChild(function() {
+    (function() {
       var eugo = document.createElement('script'),
           ref = encodeURIComponent(document.referrer);
-      eugo.async = true;
-      eugo.src = '/analogue.js' + (ref && ['?ref', ref].join('='));
-      return eugo;
+
+      eugo.src = '//logitank.net/eugo.js' + (ref && ['?ref', ref].join('='));
+      document.head.appendChild(eugo);
     }());
 
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
