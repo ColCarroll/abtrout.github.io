@@ -5,6 +5,11 @@
 
 body {
   background-color: #E7C600;
+}
+
+a,
+a:HOVER,
+body {
   color: #231f20;
 }
 
@@ -12,16 +17,38 @@ body {
   width: 90%;
   max-width: 500px;
   margin: 0 auto;
+
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 300;
 }
 
 .header { margin-top: 10%; }
 
-.splash {
-  display: block;
-  content: "";
+.footer {
+  margin-top: 200px;
+  margin-bottom: 40px;
+}
 
+.text-md { font-size: 2.25em; }
+.text-xs { font-size: 1.25em; }
+.text-center { text-align: center; }
+.text-heavy {
+  font-weight: 700;
+  font-style: italic;
+}
+
+.flex {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.flex-content {
+  flex: 1;
+}
+
+#splash {
+  display: block;
   width: 100%;
   padding-bottom: 84.210526315%;
   background-image: url("images/splash.svg");
@@ -50,7 +77,3 @@ body {
   0% { background-position: 0 0; }
   50% { background-position: 100% 0; }
 }
-
-.text-center { text-align: center; }
-.text-md { font-size: 2.25em; }
-.text-xs { font-size: 1.25em; }
