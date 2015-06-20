@@ -3,12 +3,9 @@
   padding: 0;
 }
 
-body {
-  background-color: #E7C600;
-}
+body { background-color: #E7C600; }
 
-a,
-a:HOVER,
+a, a:HOVER,
 body {
   color: #231f20;
 }
@@ -17,9 +14,6 @@ body {
   width: 90%;
   max-width: 500px;
   margin: 0 auto;
-
-  font-family: "Roboto Condensed", sans-serif;
-  font-weight: 300;
 }
 
 .header { margin-top: 10%; }
@@ -29,9 +23,13 @@ body {
   margin-bottom: 40px;
 }
 
+.text { font-family: "Roboto Condensed", sans-serif }
+.text-center { text-align: center; }
+
 .text-md { font-size: 1.95em; }
 .text-sm { font-size: 1.25em; }
-.text-center { text-align: center; }
+
+.text-light { font-weight: 300; }
 .text-heavy {
   font-weight: 700;
   font-style: italic;
@@ -45,32 +43,25 @@ body {
 
 .flex-content { flex: 1; }
 
-.construction {
+.relative { position: relative; }
+
+#cursor {
   display: block;
-  width: 100%;
-  padding-bottom: 90%;
-  background-image: url("splash.svg");
-  background-size: 200%;
-
-  -webkit-animation: blink 1337ms steps(1) infinite;
-  -moz-animation: blink 1337ms steps(1) infinite;
-  -mos-animation: blink 1337ms steps(1) infinite;
-  animation: blink 1337ms steps(1) infinite;
+  position: absolute;
+  left: 65%; top: 30%;
+  width: 1.666%; height: 3.25%;
+  background-color: #231f20;
+  border-radius: 1px;
 }
 
-@-webkit-keyframes blink {
-  0% { background-position: 0 0; }
-  50% { background-position: 100% 0; }
+.blinking {
+  -webkit-animation: blink 1200ms steps(1) infinite;
+  -moz-animation: blink 1200ms steps(1) infinite;
+  -ms-animation: blink 1200ms steps(1) infinite;
+  animation: blink 1200ms steps(1) infinite;
 }
-@-moz-keyframes blink {
-  0% { background-position: 0 0; }
-  50% { background-position: 100% 0; }
-}
-@-ms-keyframes blink {
-  0% { background-position: 0 0; }
-  50% { background-position: 100% 0; }
-}
-@keyframes blink {
-  0% { background-position: 0 0; }
-  50% { background-position: 100% 0; }
-}
+
+@-webkit-keyframes blink { 50% { visibility: hidden; }}
+@-moz-keyframes blink { 50% { visibility: hidden; }}
+@-ms-keyframes blink { 50% { visibility: hidden; }}
+@keyframes blink { 50% { visibility: hidden; }}
