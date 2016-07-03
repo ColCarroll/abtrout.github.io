@@ -1,1 +1,1 @@
-[logitank LABS](http://logitank.net)
+# logitank LABS
